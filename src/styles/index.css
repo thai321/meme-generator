@@ -13,8 +13,8 @@ body {
   padding: 10px;
 }
 
-/*memes.js component*/
 
+/*memes.js component*/
 .meme-item {
   text-align: left;
   display: inline-block;
@@ -42,4 +42,28 @@ body {
   position: absolute;
   border-radius: 5px;
   bottom: 0;
+  animation: fade-in;
+  animation-duration: 1s;
+  font-size: 14px;
+}
+
+.no-txt {
+  display: none;
+}
+
+.darken-img {
+  background-color: gray;
+  filter: brightness(10%);
+  animation-name: darken;
+  animation-duration: 1s;
+}
+
+@keyframes darken {
+  from {filter: brightness(90%)}
+  to {filter: brightness(10%)}
+}
+
+@keyframes fade-in {
+  from {opacity: 0}
+  to {opacity: 100}
 }
